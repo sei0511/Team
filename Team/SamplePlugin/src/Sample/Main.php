@@ -12,7 +12,7 @@ use Sei\team\T;
 class Main extends PluginBase implements Listener{
 
 	public function onEnable(){
-		T::createTeam("red");
+		T::createTeam("red");//チーム作成
 		T::createTeam("blue");
 
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
