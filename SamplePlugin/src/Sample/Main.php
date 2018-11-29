@@ -10,7 +10,8 @@ use pocketmine\event\player\{PlayerJoinEvent,PlayerQuitEvent};
 use Sei\team\T;
 
 class Main extends PluginBase implements Listener{
-
+	
+	const LANGUAGE = "eng";//please select your language!(eng or jpn)
 	public function onEnable(){
 		T::createTeam("red");
 		T::createTeam("blue");
@@ -26,16 +27,24 @@ class Main extends PluginBase implements Listener{
 		T::joinTeam($team,$player);
 
 		$tname = T::getPTeam($player);
+		$lang = self::LANGUAGE;
+		
+		if($lang === "eng")
+		? $player->sendMessage("Your joined {$tname} team.")
+		: $player->sendMessage("あなたは {$tname} チームに参加しました");
 
-		$player->sendMessage("あなたは {$tname} に参加しました");
 	}
 
 	public function onQuit(PlayerQuitEvent $event){
 		$player = $event->getPlayer();
 		$name = $player->getName();
 		$team = T::getPTeam($player);
-
-		Server::getInstance()->broadcastMessage("{$name}が{$team}を抜けました");
+		$lang = self::LANGUAGE;
+		
+		if($lang === "eng")
+		? Server::getInstance()->broadcastMessage("{$name} left {$team} team.")
+		: Server::getInstance()->broadcastMessage("{$name}が{$team}チームを抜けました"); 
+		
 		T::leaveTeam($team,$player);
 	}
 
