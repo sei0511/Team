@@ -20,5 +20,5 @@ When you want to call a function
     getAllTeam()//All teams and the number of people belonging to them are returned as an array.
 
 
-Thank you for watching! If you have any problems, please do so to Twitter.
-Twitter : https://twitter.com/MS_SEI0511
+Thank you for watching! If you have any problems, please do so to Twitter.  
+Twitter : <https://twitter.com/MS_SEI0511>
