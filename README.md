@@ -18,3 +18,7 @@ When you want to call a function
     getPTeam(Player $player)//Returns the name of the team the player belongs to, but false if the player does not belong to the team.
     getAllPlayer()//The team to which all the players belong is returned as an array.
     getAllTeam()//All teams and the number of people belonging to them are returned as an array.
+
+
+Thank you for watching! If you have any problems, please do so to Twitter.
+Twitter : https://twitter.com/MS_SEI0511
