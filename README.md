@@ -1,5 +1,10 @@
 # Team
 PMMP Team Library  
+PMMPのチームライブラリです  
+
+I think that you can see how to use it more by looking at SamplePlugin.  
+詳しい使い方はSamplePluginを見ればわかると思います  
+
 **How to use**  
 Please be sure to write in use statement!  
 `use Sei\team\T;`  
