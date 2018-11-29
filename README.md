@@ -14,4 +14,7 @@ When you want to call a function
     deleteTeam(string $teamname)//Delete the team but return false if the team does not exist.
     joinTeam(string $teamname, Player $player)//Returns false if the player is to join the team but the team does not exist.
     leaveTeam(string $teamname, Player $player)//Player leave team.However, if the team does not exist or does not belong to the team, false is returned.
-    
+    getTeamData(string $teamname)//The number of people belonging to that team is returned, but false is returned if the team does not exist.
+    getPTeam(Player $player)//Returns the name of the team the player belongs to, but false if the player does not belong to the team.
+    getAllPlayer()//The team to which all the players belong is returned as an array.
+    getAllTeam()//All teams and the number of people belonging to them are returned as an array.
