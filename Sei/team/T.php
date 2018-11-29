@@ -32,10 +32,25 @@ class T {
 		return(isset(self::$pteam[$name])) ? true : false;
 
 	}
-
+	
 	public static function deleteTeam(string $teamname){
-
-		if(self::checkTeam($teamname)) unset(self::$team[$teamname]);
+		
+		if(self::checkTeam($teamname)){
+			
+			if(!self::getTeamData($teamname) === 0){
+				
+				unset(self::$team[$teamname]);
+				
+				foreach(self::$pteam as $name => $team){
+					
+					if($team === $teamname){
+						unset(self::$pteam[$name]);
+					}
+				}
+				return true;
+			}
+			return false;
+		}
 
 	}
 
@@ -73,8 +88,7 @@ class T {
 		if(!self::checkTeam($teamname)) return true;
 
 		$team = self::$team[$teamname];
-
-		//チームに入っている人数
+		
 		return $team;
 		
 	}
@@ -87,7 +101,6 @@ class T {
 
 		$team = self::$pteam[$name];
 
-		//プレイヤーが入っているチーム
 		return $team;
 
 	}
