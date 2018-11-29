@@ -87,7 +87,7 @@ class T {
 
 	public static function getTeamData(string $teamname){
 
-		if(!self::checkTeam($teamname)) return true;
+		if(!self::checkTeam($teamname)) return false;
 
 		$team = self::$team[$teamname];
 
@@ -98,7 +98,7 @@ class T {
 
 	public static function getPTeam(Player $player){
 
-		if(!self::checkPTeam($player)) return true;
+		if(!self::checkPTeam($player)) return false;
 
 		$name = $player->getName();
 
