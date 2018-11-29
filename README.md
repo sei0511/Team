@@ -7,6 +7,7 @@ When you want to call a function
 `T::function()`
 
 **Functions**  
+
     createTeam($teamname)//create new Team! True will be returned if the team has already been created.
     
-    checkTeam
+    checkTeam($teamname)//Make sure that the team exists.Returns true if the team exists, false otherwise.
