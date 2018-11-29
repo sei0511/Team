@@ -33,10 +33,27 @@ class T {
 
 	}
 
+
 	public static function deleteTeam(string $teamname){
 
-		if(self::checkTeam($teamname)) unset(self::$team[$teamname]);
+		if(self::checkTeam($teamname)){
+			
+			if(!self::getTeamData($teamname) === 0){
+				
+				unset(self::$team[$teamname]);
 
+				foreach(self::$pteam as $name => $team){
+					
+					if($team === $teamname){
+
+						unset(self::$pteam[$name]);
+
+					}
+				}
+				return true;
+			}
+			return false;
+		}
 	}
 
 	public static function joinTeam(string $teamname, Player $player){
