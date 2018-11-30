@@ -29,7 +29,7 @@ class Main extends PluginBase implements Listener{
 		$tname = T::getPTeam($player);
 		$lang = self::LANGUAGE;
 		
-		if($lang === "eng")
+		$lang === "eng"
 		? $player->sendMessage("Your joined {$tname} team.")
 		: $player->sendMessage("あなたは {$tname} チームに参加しました");
 
@@ -41,7 +41,7 @@ class Main extends PluginBase implements Listener{
 		$team = T::getPTeam($player);
 		$lang = self::LANGUAGE;
 		
-		if($lang === "eng")
+		$lang === "eng"
 		? Server::getInstance()->broadcastMessage("{$name} left {$team} team.")
 		: Server::getInstance()->broadcastMessage("{$name}が{$team}チームを抜けました"); 
 		
