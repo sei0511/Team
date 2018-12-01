@@ -91,7 +91,6 @@ class T {
 
 		$team = self::$team[$teamname];
 
-		//チームに入っている人数
 		return $team;
 		
 	}
@@ -104,7 +103,6 @@ class T {
 
 		$team = self::$pteam[$name];
 
-		//プレイヤーが入っているチーム
 		return $team;
 
 	}
